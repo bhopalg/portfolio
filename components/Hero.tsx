@@ -2,7 +2,7 @@ import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-between pt-24 pb-8 grain">
+    <section className="min-h-screen flex flex-col justify-between pt-24 pb-8 grain px-3 lg:px-0">
       <div className="container mx-auto">
         {/* Top bar */}
         <div className="flex items-center justify-between mb-16 md:mb-24">

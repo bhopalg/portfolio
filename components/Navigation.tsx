@@ -9,7 +9,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      setIsScrolled(window.scrollY > 35);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -26,7 +26,7 @@ export default function Navigation() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-3 lg:px-0 ${
           isScrolled
             ? "bg-background/95 backdrop-blur-sm border-b border-border"
             : "bg-transparent"
@@ -73,7 +73,7 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-background pt-20 md:hidden">
+        <div className="fixed inset-0 z-40 bg-background pt-20 md:hidden px-3 lg:px-0">
           <div className="container py-8">
             <div className="flex flex-col gap-6">
               {navLinks.map((link, index) => (
