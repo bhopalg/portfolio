@@ -1,4 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+
 import Container from "@/components/ui/Container";
 
 export default function FeaturedProject() {
@@ -22,23 +25,13 @@ export default function FeaturedProject() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left - Visual */}
-          <div className="relative aspect-[4/3] bg-muted border border-border overflow-hidden group">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <p className="text-8xl md:text-9xl font-display font-900 text-foreground/5 group-hover:text-foreground/10 transition-colors">
-                  C3
-                </p>
-              </div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t from-background/90 to-transparent">
-              <p className="font-mono text-xs text-muted-foreground mb-2">
-                LIVE PROJECT
-              </p>
-              <h3 className="text-3xl md:text-4xl font-display font-800">
-                CULTUR3
-              </h3>
-            </div>
-          </div>
+          <Image
+            src="/cultur3.png"
+            width="736"
+            height="552"
+            alt="Cultur3 membership event platform screenshot"
+            className="relative aspect-[4/3] bg-muted border border-border overflow-hidden group"
+          />
 
           {/* Right - Details */}
           <div className="flex flex-col justify-between">
@@ -100,7 +93,7 @@ export default function FeaturedProject() {
 
             {/* CTA */}
             <div className="mt-8">
-              <a
+              <Link
                 href="https://cultur3.co.uk"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -110,7 +103,7 @@ export default function FeaturedProject() {
                   Visit cultur3.co.uk
                 </span>
                 <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
