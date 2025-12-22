@@ -1,9 +1,10 @@
 import { ArrowDown } from "lucide-react";
+import Container from "@/components/ui/Container";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-between pt-24 pb-8 grain px-3 lg:px-0">
-      <div className="container mx-auto">
+    <section className="min-h-screen flex flex-col justify-between pt-24 pb-8 grain">
+      <Container>
         {/* Top bar */}
         <div className="flex items-center justify-between mb-16 md:mb-24">
           <p className="font-mono text-xs text-muted-foreground tracking-wider">
@@ -29,10 +30,10 @@ export default function Hero() {
             ENGINEER<span className="text-primary">.</span>
           </h1>
         </div>
-      </div>
+      </Container>
 
       {/* Bottom section */}
-      <div className="container mx-auto">
+      <Container>
         <div className="divider-line mb-8" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
           <div>
@@ -59,7 +60,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
