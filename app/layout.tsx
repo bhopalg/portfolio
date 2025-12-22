@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -31,6 +34,8 @@ export default function RootLayout({
           <Navigation />
           {children}
           <Footer />
+          <Analytics />
+          <SpeedInsights />
         </div>
       </body>
     </html>
