@@ -1,11 +1,16 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+
 import Container from "@/components/ui/Container";
 
 export default function Contact() {
   const links = [
-    { label: "EMAIL", href: "mailto:hello@example.com" },
-    { label: "GITHUB", href: "https://github.com" },
-    { label: "LINKEDIN", href: "https://linkedin.com" },
+    { label: "EMAIL", href: "mailto:gbhopal@icloud.com" },
+    { label: "GITHUB", href: "https://github.com/bhopalg" },
+    {
+      label: "LINKEDIN",
+      href: "https://www.linkedin.com/in/gurpreet-bhopal-063a6a73",
+    },
   ];
 
   return (
@@ -32,7 +37,7 @@ export default function Contact() {
           {/* Links */}
           <div className="flex flex-col sm:flex-row gap-4">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 target={link.label !== "EMAIL" ? "_blank" : undefined}
@@ -41,7 +46,7 @@ export default function Contact() {
               >
                 <span className="font-mono text-sm">{link.label}</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </a>
+              </Link>
             ))}
           </div>
         </div>
