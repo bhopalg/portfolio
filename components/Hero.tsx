@@ -1,5 +1,7 @@
 import { ArrowDown } from "lucide-react";
 import Container from "@/components/ui/Container";
+import { yearsSince2014 } from "@/lib/utils";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 export default function Hero() {
   return (
@@ -41,7 +43,7 @@ export default function Hero() {
               YEARS OF EXPERIENCE
             </p>
             <p className="text-6xl md:text-7xl font-display font-800 text-primary">
-              {yearsSince2014()}+
+              <AnimatedCounter targetNumber={yearsSince2014()} />+
             </p>
           </div>
           <div className="md:text-center">
@@ -63,23 +65,4 @@ export default function Hero() {
       </Container>
     </section>
   );
-}
-
-export function yearsSince2014(): number {
-  const startDate = new Date(2014, 0, 1); // Jan 1, 2016
-  const now = new Date();
-
-  let years = now.getFullYear() - startDate.getFullYear();
-
-  // If we haven't reached the anniversary yet this year, subtract 1
-  const hasHadAnniversaryThisYear =
-    now.getMonth() > startDate.getMonth() ||
-    (now.getMonth() === startDate.getMonth() &&
-      now.getDate() >= startDate.getDate());
-
-  if (!hasHadAnniversaryThisYear) {
-    years -= 1;
-  }
-
-  return years;
 }

@@ -1,3 +1,6 @@
+import { yearsSince2014 } from "@/lib/utils";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
+
 export default function About() {
   return (
     <section id="about" className="py-24 md:py-32">
@@ -31,7 +34,7 @@ export default function About() {
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
               <div>
                 <p className="text-3xl md:text-4xl font-display font-800 mb-1">
-                  11+
+                  <AnimatedCounter targetNumber={yearsSince2014()} />+
                 </p>
                 <p className="font-mono text-xs text-muted-foreground">
                   YEARS EXP
@@ -39,7 +42,7 @@ export default function About() {
               </div>
               <div>
                 <p className="text-3xl md:text-4xl font-display font-800 mb-1">
-                  3
+                  <AnimatedCounter targetNumber={3} />
                 </p>
                 <p className="font-mono text-xs text-muted-foreground">
                   CERTIFICATIONS
@@ -47,7 +50,7 @@ export default function About() {
               </div>
               <div>
                 <p className="text-3xl md:text-4xl font-display font-800 mb-1">
-                  85+
+                  <AnimatedCounter targetNumber={85} />+
                 </p>
                 <p className="font-mono text-xs text-muted-foreground">
                   SITES MANAGED
