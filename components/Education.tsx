@@ -4,16 +4,32 @@ import Container from "@/components/ui/Container";
 export default function Education() {
   const education = [
     {
-      school: "COVENTRY UNIVERSITY",
+      no: 1,
+      school: "Coventry University",
       degree: "Business Information Technology BSc",
       period: "2013 — 2016",
       result: "First Class Honours",
     },
     {
-      school: "SOLIHULL TECHNICAL COLLEGE",
+      no: 2,
+      school: "Solihull Technical College",
       degree: "HND Business Information Technology",
       period: "2011 — 2013",
       result: "Merit",
+    },
+    {
+      no: 3,
+      school: "Nether Stowe High School",
+      degree: "A Level Maths, Information Technology, Chemistry",
+      period: "2008 - 2011",
+      result: "A Levels",
+    },
+    {
+      no: 4,
+      school: "Nether Stowe High School",
+      degree: "10 GCSEs including English, Maths (A), Science and ICT",
+      period: "2008 - 2011",
+      result: "Grades A-C",
     },
   ];
 
@@ -33,10 +49,7 @@ export default function Education() {
           <div className="lg:col-span-7 lg:col-start-6">
             <div className="space-y-0">
               {education.map((edu) => (
-                <div
-                  key={edu.school}
-                  className="border-t border-border py-8 group"
-                >
+                <div key={edu.no} className="border-t border-border py-8 group">
                   <div className="flex items-start justify-between gap-8">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
@@ -46,7 +59,7 @@ export default function Education() {
                         </p>
                       </div>
                       <h3 className="text-xl md:text-2xl font-display font-700 mb-1">
-                        {edu.school}
+                        {edu.school.toUpperCase()}
                       </h3>
                       <p className="text-muted-foreground">{edu.degree}</p>
                     </div>
