@@ -36,6 +36,16 @@ export default function Experience() {
     },
     {
       num: "04",
+      company: "Nandos",
+      role: "Griller/Cashier",
+      period: "2013 — 2017",
+      description:
+        "Part-time job during university. Customer service and food preparation.",
+      tech: [],
+      href: "https://www.nandos.co.uk",
+    },
+    {
+      num: "05",
       company: "SPORTSDIRECT",
       role: "Web Designer",
       period: "2014 — 2015",
@@ -61,7 +71,7 @@ export default function Experience() {
             </h2>
           </div>
           <p className="hidden md:block font-mono text-xs text-muted-foreground">
-            04 POSITIONS
+            {experiences.length.toString().padStart(2, "0")} POSITIONS
           </p>
         </div>
 
