@@ -57,7 +57,10 @@ export default function Experience() {
   ];
 
   return (
-    <section id="work" className="py-24 md:py-32 bg-secondary/50">
+    <section
+      id="work"
+      className="py-24 md:py-32 bg-secondary/50 overflow-hidden"
+    >
       <Container>
         <div className="flex items-end justify-between mb-16">
           <div>
