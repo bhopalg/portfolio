@@ -51,10 +51,10 @@ export default function About() {
               </div>
               <div>
                 <p className="text-3xl md:text-4xl font-display font-800 mb-1">
-                  85+
+                  5+
                 </p>
                 <p className="font-mono text-xs text-muted-foreground">
-                  SITES MANAGED
+                  INDUSTRIES
                 </p>
               </div>
             </div>

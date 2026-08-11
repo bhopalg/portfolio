@@ -12,7 +12,7 @@ I thrive in collaborative, remote-first environments that value curiosity, share
 
 - **11+ Years** of Professional Experience
 - **3** Professional Certifications (AWS, Azure, Databricks)
-- **85+** Sites managed throughout my career
+- **5+** Industries spanning enterprise platforms, energy, aviation, betting, and retail
 
 ---
 
