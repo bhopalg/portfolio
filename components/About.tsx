@@ -1,9 +1,11 @@
 import { yearsSince2014 } from "@/lib/utils";
+import Section from "@/components/Section";
+import Container from "@/components/ui/Container";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32">
-      <div className="container mx-auto px-3 lg:px-0">
+    <Section id="about">
+      <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Left column */}
           <div className="lg:col-span-4">
@@ -58,7 +60,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

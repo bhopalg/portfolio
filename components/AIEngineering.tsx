@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import Section from "@/components/Section";
 
 const workflow = [
   {
@@ -65,7 +66,7 @@ const capabilities = [
 
 export default function AIEngineering() {
   return (
-    <section id="ai" className="py-24 md:py-32">
+    <Section id="ai">
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
@@ -155,6 +156,6 @@ export default function AIEngineering() {
           ))}
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

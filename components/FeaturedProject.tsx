@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import Container from "@/components/ui/Container";
 import cultur3Image from "@/public/cultur3.png";
+import Section from "@/components/Section";
 
 export default function FeaturedProject() {
   const techStack = [
@@ -16,7 +17,7 @@ export default function FeaturedProject() {
   ];
 
   return (
-    <section id="project" className="py-24 md:py-32 bg-secondary/50">
+    <Section id="project">
       <Container>
         <div className="mb-12">
           <p className="font-mono text-xs text-muted-foreground mb-4">
@@ -118,6 +119,6 @@ export default function FeaturedProject() {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

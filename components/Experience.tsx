@@ -1,6 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+
 import Container from "@/components/ui/Container";
+import Section from "@/components/Section";
 
 export default function Experience() {
   const experiences = [
@@ -67,10 +69,7 @@ export default function Experience() {
   ];
 
   return (
-    <section
-      id="work"
-      className="py-24 md:py-32 bg-secondary/50 overflow-hidden"
-    >
+    <Section id="work" className="bg-secondary/50 overflow-hidden">
       <Container>
         <div className="flex items-end justify-between mb-16">
           <div>
@@ -148,6 +147,6 @@ export default function Experience() {
           ))}
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

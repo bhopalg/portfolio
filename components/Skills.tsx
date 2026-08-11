@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import Section from "@/components/Section";
 
 export default function Skills() {
   const skillGroups = [
@@ -40,7 +41,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 md:py-32">
+    <Section id="skills" className="bg-secondary/50">
       <Container>
         <div className="mb-16">
           <p className="font-mono text-xs text-muted-foreground mb-4">
@@ -94,6 +95,6 @@ export default function Skills() {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

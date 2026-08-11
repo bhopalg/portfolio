@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 import Container from "@/components/ui/Container";
+import Section from "@/components/Section";
 
 export default function Contact() {
   const links = [
@@ -14,7 +15,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-secondary/50 grain">
+    <Section id="contact" className="grain">
       <Container>
         <div className="max-w-4xl">
           <p className="font-mono text-xs text-muted-foreground mb-6">
@@ -51,6 +52,6 @@ export default function Contact() {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

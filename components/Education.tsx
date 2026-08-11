@@ -1,5 +1,7 @@
 import { GraduationCap } from "lucide-react";
+
 import Container from "@/components/ui/Container";
+import Section from "@/components/Section";
 
 export default function Education() {
   const education = [
@@ -34,7 +36,7 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-24 md:py-32">
+    <Section id="education" className="bg-secondary/50">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
@@ -75,6 +77,6 @@ export default function Education() {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }
