@@ -1,40 +1,43 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Outfit, Space_Mono } from "next/font/google";
 import Script from "next/script";
 
 import "@/app/globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { yearsSince2014 } from "@/lib/utils";
 
-const siteUrl = "https://www.gbhopal.com";
+const siteUrl = "https://gbhopal.com";
 const siteName = "Gurpreet Bhopal Portfolio";
-const title =
-  "Gurpreet Bhopal | Senior Software Engineer - React, Next.js, TypeScript";
-const description =
-  "Senior Software Engineer with 11+ years of experience building scalable SaaS and enterprise systems using React, Next.js, TypeScript, Go, Python, AWS, and Azure.";
+const title = "Gurpreet Bhopal | Senior Full-Stack Software Engineer";
+const description = `Senior full-stack software engineer with ${yearsSince2014()}+ years of experience building scalable SaaS and enterprise systems with React, Next.js, TypeScript, Go and Python.`;
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title,
+  title: {
+    default: title,
+    template: "%s | Gurpreet Bhopal",
+  },
   description,
   applicationName: siteName,
   authors: [{ name: "Gurpreet Bhopal", url: siteUrl }],
   creator: "Gurpreet Bhopal",
   publisher: "Gurpreet Bhopal",
-  keywords: [
-    "Gurpreet Bhopal",
-    "Senior Software Engineer",
-    "React developer",
-    "Next.js developer",
-    "TypeScript developer",
-    "Go developer",
-    "Python developer",
-    "AWS",
-    "Azure",
-    "SaaS engineer",
-    "full-stack developer",
-  ],
   alternates: {
     canonical: siteUrl,
   },
@@ -47,10 +50,10 @@ export const metadata: Metadata = {
     locale: "en_GB",
     images: [
       {
-        url: "/cultur3.png",
-        width: 736,
-        height: 552,
-        alt: "Cultur3 platform screenshot from Gurpreet Bhopal portfolio",
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 600,
+        alt: "Gurpreet Bhopal — Senior Full-Stack Software Engineer",
       },
     ],
   },
@@ -58,7 +61,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/cultur3.png"],
+    images: [
+      {
+        url: "/twitter-image.png",
+        width: 1200,
+        height: 600,
+        alt: "Gurpreet Bhopal — Senior Full-Stack Software Engineer",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -138,13 +148,13 @@ const jsonLd = {
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: `${siteUrl}/cultur3.png`,
-        width: 736,
-        height: 552,
+        width: 1454,
+        height: 1090,
       },
       inLanguage: "en-GB",
     },
     {
-      "@type": "CreativeWork",
+      "@type": "WebApplication",
       "@id": `${siteUrl}/#cultur3-project`,
       name: "Cultur3 membership event platform",
       url: "https://cultur3.co.uk",
@@ -153,7 +163,9 @@ const jsonLd = {
       creator: {
         "@id": `${siteUrl}/#person`,
       },
-      programmingLanguage: ["TypeScript", "JavaScript", "SQL"],
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      browserRequirements: "Requires JavaScript and a modern web browser",
       keywords: ["Next.js", "React", "Supabase", "Stripe", "AWS S3"],
     },
   ],
@@ -165,7 +177,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-GB" className={`${outfit.variable} ${spaceMono.variable}`}>
       <body>
         <div className="min-h-dvh bg-background">
           <Script

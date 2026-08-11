@@ -1,7 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { yearsSince2014 } from "@/lib/utils";
-import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 export default function Hero() {
   return (
@@ -13,7 +12,7 @@ export default function Hero() {
             PORTFOLIO / {new Date().getFullYear()}
           </p>
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse motion-reduce:animate-none" />
             <span className="font-mono text-xs text-muted-foreground">
               AVAILABLE
             </span>
@@ -23,13 +22,14 @@ export default function Hero() {
         {/* Main title */}
         <div className="space-y-4 md:space-y-6">
           <h1 className="text-[12vw] md:text-[10vw] lg:text-[8vw] font-display font-900 leading-[0.85] tracking-tighter">
-            SENIOR
-          </h1>
-          <h1 className="text-[12vw] md:text-[10vw] lg:text-[8vw] font-display font-900 leading-[0.85] tracking-tighter text-outline text-outline-hover transition-all duration-300">
-            SOFTWARE
-          </h1>
-          <h1 className="text-[12vw] md:text-[10vw] lg:text-[8vw] font-display font-900 leading-[0.85] tracking-tighter">
-            ENGINEER<span className="text-primary">.</span>
+            <span className="sr-only">Gurpreet Bhopal — </span>
+            <span className="block">SENIOR</span>{" "}
+            <span className="block text-outline text-outline-hover transition-all duration-300">
+              SOFTWARE
+            </span>{" "}
+            <span className="block">
+              ENGINEER<span className="text-primary">.</span>
+            </span>
           </h1>
         </div>
       </Container>
@@ -43,7 +43,7 @@ export default function Hero() {
               YEARS OF EXPERIENCE
             </p>
             <p className="text-6xl md:text-7xl font-display font-800 text-primary">
-              <AnimatedCounter targetNumber={yearsSince2014()} />+
+              {yearsSince2014()}+
             </p>
           </div>
           <div className="md:text-center">

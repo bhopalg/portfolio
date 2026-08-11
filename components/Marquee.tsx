@@ -20,6 +20,7 @@ export default function Marquee() {
         {[...items, ...items].map((item, i) => (
           <span
             key={i}
+            aria-hidden={i >= items.length}
             className="font-mono text-sm text-muted-foreground flex items-center gap-12"
           >
             {item}

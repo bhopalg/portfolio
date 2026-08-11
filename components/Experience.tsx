@@ -81,7 +81,12 @@ export default function Experience() {
         {/* Experience list */}
         <div className="space-y-0">
           {experiences.map((exp) => (
-            <Link key={exp.company} href={exp.href} target="_blank">
+            <Link
+              key={exp.company}
+              href={exp.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="group border-t border-border py-8 md:py-12 hover:bg-muted/30 transition-colors px-4 -mx-4">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
                   {/* Number */}

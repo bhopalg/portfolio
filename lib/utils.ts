@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function yearsSince2014(): number {
-  const startDate = new Date(2014, 0, 1); // Jan 1, 2016
+  const startDate = new Date(2014, 0, 1); // Jan 1, 2014
   const now = new Date();
 
   let years = now.getFullYear() - startDate.getFullYear();

@@ -1,5 +1,4 @@
 import { yearsSince2014 } from "@/lib/utils";
-import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 export default function About() {
   return (
@@ -34,7 +33,7 @@ export default function About() {
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
               <div>
                 <p className="text-3xl md:text-4xl font-display font-800 mb-1">
-                  <AnimatedCounter targetNumber={yearsSince2014()} />+
+                  {yearsSince2014()}+
                 </p>
                 <p className="font-mono text-xs text-muted-foreground">
                   YEARS EXP
@@ -42,7 +41,7 @@ export default function About() {
               </div>
               <div>
                 <p className="text-3xl md:text-4xl font-display font-800 mb-1">
-                  <AnimatedCounter targetNumber={3} />
+                  3
                 </p>
                 <p className="font-mono text-xs text-muted-foreground">
                   CERTIFICATIONS
@@ -50,7 +49,7 @@ export default function About() {
               </div>
               <div>
                 <p className="text-3xl md:text-4xl font-display font-800 mb-1">
-                  <AnimatedCounter targetNumber={85} />+
+                  85+
                 </p>
                 <p className="font-mono text-xs text-muted-foreground">
                   SITES MANAGED

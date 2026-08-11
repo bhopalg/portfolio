@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,11 +17,11 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { label: "ABOUT", href: "#about" },
-    { label: "WORK", href: "#work" },
-    { label: "SKILLS", href: "#skills" },
-    { label: "PROJECT", href: "#project" },
-    { label: "CONTACT", href: "#contact" },
+    { label: "ABOUT", href: "/#about" },
+    { label: "WORK", href: "/#work" },
+    { label: "SKILLS", href: "/#skills" },
+    { label: "PROJECT", href: "/#project" },
+    { label: "CONTACT", href: "/#contact" },
   ];
 
   return (
@@ -35,23 +36,23 @@ export default function Navigation() {
         <div className="container mx-auto">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a
-              href="#"
+            <Link
+              href="/"
               className="font-display font-800 text-lg tracking-tight"
             >
               DEV<span className="text-primary">.</span>
-            </a>
+            </Link>
 
             {/* Desktop navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   className="font-mono text-xs text-muted-foreground hover:text-foreground link-underline transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -60,6 +61,8 @@ export default function Navigation() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 text-foreground"
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
               {isMobileMenuOpen ? (
                 <X className="w-5 h-5" />
@@ -73,11 +76,14 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-background pt-20 md:hidden px-3 lg:px-0">
+        <div
+          id="mobile-navigation"
+          className="fixed inset-0 z-40 bg-background pt-20 md:hidden px-3 lg:px-0"
+        >
           <div className="container py-8">
             <div className="flex flex-col gap-6">
               {navLinks.map((link, index) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -85,7 +91,7 @@ export default function Navigation() {
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
