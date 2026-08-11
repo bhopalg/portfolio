@@ -33,22 +33,28 @@ I thrive in collaborative, remote-first environments that value curiosity, share
 
 ## 💼 Work Experience
 
-**BJSS / CGI | Senior Software Engineer** (2023 — Present)
+**Nearform | Senior Software Developer** (July 2026 — Present)
+
+- Building an internal platform for a confidential global consultancy using React, Python, and AWS.
+- Developing AI-powered product features and reusable AI coding skills.
+- Using AI-assisted development tools and models, including Cursor, Claude Opus, and Claude Sonnet, in daily engineering workflows.
+
+**BJSS / CGI | Senior Software Engineer** (September 2023 — July 2026)
 
 - Tech Lead on React & Go applications for betting and aviation sectors.
 - Focus: Performance, Accessibility, and SEO optimization.
 
-**RES | Software Engineer** (2022 — 2023)
+**RES | Software Engineer** (July 2022 — September 2023)
 
 - Developed core platform managing 200+ assets, processing millions of data points.
 - Stack: Python, FastAPI, React, Azure.
 
-**Smarter Data | Developer → Senior Developer** (2016 — 2022)
+**Smarter Data | Developer → Senior Developer** (September 2016 — July 2022)
 
 - Promoted to Senior; Lead Developer on multiple high-impact projects.
 - Stack: Node.js, TypeScript, Go, Angular, AWS.
 
-**SportsDirect | Web Designer** (2014 — 2015)
+**SportsDirect | Web Designer** (June 2014 — July 2015)
 
 - Maintained 85+ company websites during a year-in-industry placement.
 

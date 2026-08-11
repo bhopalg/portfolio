@@ -6,49 +6,59 @@ export default function Experience() {
   const experiences = [
     {
       num: "01",
+      company: "Nearform",
+      role: "Senior Software Developer",
+      period: "JUL 2026 — NOW",
+      description:
+        "Building an internal platform for a global consultancy. Developing AI-powered features and reusable AI coding skills across React, Python, and AWS.",
+      tech: ["React", "Python", "AWS", "AI Engineering"],
+      href: "https://www.nearform.com",
+    },
+    {
+      num: "02",
       company: "BJSS / CGI",
       role: "Senior Software Engineer",
-      period: "2023 — NOW",
+      period: "SEP 2023 — JUL 2026",
       description:
         "Tech Lead on React & Go applications for betting and aviation clients. Performance, accessibility, SEO optimization.",
       tech: ["React", "TypeScript", "Next.js", "Go", "Python", "AWS"],
       href: "https://www.cgi.com",
     },
     {
-      num: "02",
+      num: "03",
       company: "RES",
       role: "Software Engineer",
-      period: "2022 — 2023",
+      period: "JUL 2022 — SEP 2023",
       description:
         "Core platform managing 200+ assets, processing millions of data points. FastAPI backend, React frontend.",
       tech: ["Python", "FastAPI", "React", "Azure", "Vite"],
       href: "https://www.res-group.com",
     },
     {
-      num: "03",
+      num: "04",
       company: "SmarterDS",
       role: "Developer → Senior Developer",
-      period: "2016 — 2022",
+      period: "SEP 2016 — JUL 2022",
       description:
         "Promoted to Senior. Lead Developer on multiple projects. REST & GraphQL APIs, AWS infrastructure.",
       tech: ["Node.js", "TypeScript", "Go", "Angular", "React", "Terraform"],
       href: "https://smarterds.com",
     },
     {
-      num: "04",
+      num: "05",
       company: "Nandos",
       role: "Griller/Cashier",
-      period: "2013 — 2017",
+      period: "AUG 2013 — AUG 2017",
       description:
         "Part-time job during university. Customer service and food preparation.",
       tech: [],
       href: "https://www.nandos.co.uk",
     },
     {
-      num: "05",
+      num: "06",
       company: "SPORTSDIRECT",
       role: "Web Designer",
-      period: "2014 — 2015",
+      period: "JUN 2014 — JUL 2015",
       description:
         "Year in industry. Maintained 85+ company websites. Front-end development and design.",
       tech: ["JavaScript", "Bootstrap", "DotNetNuke"],
