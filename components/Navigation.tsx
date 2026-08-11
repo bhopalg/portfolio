@@ -19,6 +19,7 @@ export default function Navigation() {
   const navLinks = [
     { label: "ABOUT", href: "/#about" },
     { label: "WORK", href: "/#work" },
+    { label: "AI", href: "/#ai" },
     { label: "SKILLS", href: "/#skills" },
     { label: "PROJECT", href: "/#project" },
     { label: "CONTACT", href: "/#contact" },

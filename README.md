@@ -29,6 +29,13 @@ I thrive in collaborative, remote-first environments that value curiosity, share
 - **Cloud & Dev Ops:** AWS, Azure, Docker, Terraform, CI/CD.
 - **Systems:** Distributed Systems, Microservices, API Design, Security, Stripe Integration.
 
+### AI Engineering
+
+- Daily AI-assisted development with Cursor, Claude Opus, Claude Sonnet, and OpenAI Codex.
+- Custom AI skills and MCP servers for reusable, project-specific workflows.
+- Plan-driven delivery using focused subagents for research, implementation, and review.
+- Applied AI feature development at Nearform and agentic workflows across CULTUR3 and personal projects.
+
 ---
 
 ## 💼 Work Experience
