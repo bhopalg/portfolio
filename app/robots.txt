@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /tina-wedding-colours
 
 Sitemap: https://gbhopal.com/sitemap.xml

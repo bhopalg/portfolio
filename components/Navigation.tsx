@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -24,6 +26,10 @@ export default function Navigation() {
     { label: "PROJECT", href: "/#project" },
     { label: "CONTACT", href: "/#contact" },
   ];
+
+  if (pathname === "/tina-wedding-colours") {
+    return null; // Hide navigation on the tina-wedding-colours page
+  }
 
   return (
     <>
