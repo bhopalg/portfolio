@@ -99,7 +99,41 @@ I am currently **Available** and open to discussing new opportunities or high-im
 
 - **LinkedIn:** [Gurpreet Bhopal](https://linkedin.com/in/gurpreet-bhopal-063a6a73)
 - **GitHub:** [@bhopalg](https://github.com/bhopalg)
-- **Email:** [gbhopal@icloud.com](mailto:gbhopal@icloud.com)
+- **Contact:** [Send me a message](https://gbhopal.com/#contact)
+
+---
+
+## Contact form setup
+
+The contact form sends the enquiry to the portfolio owner and an acknowledgement
+to the sender. It uses Resend for delivery and Upstash Redis for IP and recipient
+rate limiting.
+
+### Resend
+
+1. Create a Resend account and add `send.gbhopal.com` under **Domains**.
+2. Add the SPF and DKIM records shown by Resend to the domain's DNS provider.
+3. Wait until the sending domain is marked **Verified**.
+4. Create a sending API key and save it as `RESEND_API_KEY` in Vercel.
+5. Set `CONTACT_FROM_EMAIL` to
+   `Gurpreet Bhopal <contact@send.gbhopal.com>`.
+6. Set `CONTACT_TO_EMAIL` to the private inbox that should receive enquiries.
+
+Using a sending subdomain keeps website email separate from the reputation and MX
+configuration of the main mailbox domain.
+
+### Upstash
+
+1. Create an Upstash account and a Redis database in a nearby region.
+2. Copy the REST URL and token from the database's **Connect** page.
+3. Save them in Vercel as `UPSTASH_REDIS_REST_URL` and
+   `UPSTASH_REDIS_REST_TOKEN`.
+
+The Vercel Marketplace integration can provision these variables automatically.
+Redeploy the site after adding or changing environment variables.
+
+For local development, copy `.env.example` to `.env.local` and fill in the five
+values. Never commit `.env.local` or any API keys.
 
 ---
 
