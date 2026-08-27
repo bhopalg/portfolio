@@ -11,10 +11,9 @@ export const contactFormSchema = z.object({
     .min(2, "Enter a name between 2 and 80 characters.")
     .max(80, "Enter a name between 2 and 80 characters."),
   email: z
-    .string()
+    .email("Enter a valid email address.")
     .trim()
     .max(254, "Enter a valid email address.")
-    .email("Enter a valid email address.")
     .transform((value) => value.toLowerCase()),
   company: z
     .string()
