@@ -175,6 +175,25 @@ const jsonLd = {
       browserRequirements: "Requires JavaScript and a modern web browser",
       keywords: ["Next.js", "React", "Supabase", "Stripe", "AWS S3"],
     },
+    {
+      "@type": "CreativeWork",
+      "@id": `${siteUrl}/#van-holtens-project`,
+      name: "Van Holten's retail launch landing page",
+      url: `${siteUrl}/projects/van-holtens`,
+      sameAs: "https://www.pulsesdltd.co.uk/van-holtens",
+      description:
+        "A responsive trade landing page for Pulse SD that presents the Van Holten's product range and supports sample requests and stocking enquiries.",
+      creator: {
+        "@id": `${siteUrl}/#person`,
+      },
+      keywords: [
+        "Responsive web design",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Conversion UX",
+      ],
+    },
   ],
 };
 

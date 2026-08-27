@@ -23,7 +23,7 @@ export default function Navigation() {
     { label: "WORK", href: "/#work" },
     { label: "AI", href: "/#ai" },
     { label: "SKILLS", href: "/#skills" },
-    { label: "PROJECT", href: "/#project" },
+    { label: "PROJECTS", href: "/#project" },
     { label: "CONTACT", href: "/#contact" },
   ];
 
